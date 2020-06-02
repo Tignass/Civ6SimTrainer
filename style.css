@@ -1,0 +1,239 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: white;
+  background-color:saddlebrown;
+  font-size:10px;
+}
+.cursor{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	/* border: 1px solid white; */
+	/* border-radius: 50%; */
+	/* url: /img/Reef.webp */
+}
+
+.sidenav {
+height: 97%;
+text-align: center;
+width: 40%;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 60%;
+/* background-color: purple; */
+overflow-x: hidden;
+padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+
+
+
+
+
+input[type="radio"]{
+  display: none;
+}
+.hide{
+  display: none;    
+}
+.test{
+	height: 300px;
+	width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+input[type="range"]{
+	width: 60%;
+}
+textarea {
+  width: 98%;
+  /* height: 200px; */
+  padding: 1% ;
+  /* box-sizing: border-box; */
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 8px;
+  background-color:Silver;
+  text-align: center;
+  /* resize: both; */
+}
+#map{ 
+  display: block; 
+  overflow: hidden; 
+  resize: both; 
+} 
+header{	
+	width: 100%;
+	float: left;
+}
+div[id="range"]{
+width: 50%;
+float: left;
+}
+fieldset{
+    margin:0.3%;
+  border-radius: 20px;
+/* Background-color: Purple; */
+}
+fieldset[id="block"]{
+/* float: left; */
+}
+fieldset[id="bot"]{
+width: 57%;
+padding: 1%;
+/* float: left; */
+}
+
+fieldset.iconfield{
+width: 1%;
+float: left;
+font-size: 22px;
+margin-left: 10%;
+font-weight: bolder;
+text-align: center;
+
+}
+
+input.River{
+	/* width: 80%; */
+}
+
+legend{
+    
+}
+img{
+  width:11%;
+  height:10%;
+}
+img.icon{
+  width:25px;
+  height:25px;
+}
+div {
+  float: left;
+  width:100%;
+}
+canvas { 
+  float: left;
+  border:0;
+  display:block;
+  margin:0 auto;
+}
+
+footer[id="areatext"] {
+
+  float: right;
+  width:76%;
+}
+footer {
+  /* background-color: Purple; */
+  padding: 1%;
+  text-align: center;
+  color: white;
+  float: right;
+  width:100%;
+  display: inline;
+}
+header {
+    /* background-color: Purple; */
+  padding: 1%;
+  text-align: center;
+  color: white;
+  float: right;
+  width:20%;
+}
+.display{
+	width: 60%;
+	word-break: break-all
+}
+section{
+float: left;
+  text-align: center;
+  width:60%;
+  padding: 1%;
+}
+floatanter{
+  display: block;
+float: left;
+width : 65%;
+  display: block;
+  padding : 1%;
+}
+/* Clear floats after the columns */
+floatanter:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+section:footer {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.cc-selector input {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+.cc-selector input:active+.drinkcard-cc {
+  opacity: .9;
+}
+
+.cc-selector input:checked+.drinkcard-cc {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+
+.drinkcard-cc {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(0.7) opacity(.7);
+  -moz-filter: brightness(1.8) grayscale(0.7) opacity(.7);
+  filter: brightness(1.8) grayscale(0.7) opacity(.7);
+}
+
+.drinkcard-cc:hover {
+  -webkit-filter: brightness(1.2) grayscale(.3) opacity(.9);
+  -moz-filter: brightness(1.2) grayscale(.3) opacity(.9);
+  filter: brightness(1.2) grayscale(.3) opacity(.9);
+}
+
+/* Extras */
+a:visited {
+  color: #888
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+}
+

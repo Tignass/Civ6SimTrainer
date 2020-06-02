@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>       
+    
+    <!-- <meta http-equiv="refresh" content="5" > -->
+  <meta charset="utf-8" />
+    
+        <title>Canvas Hexagonal Map</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+
+	<body>
+	<div class="sidenav">
+	<fieldset>
+		<legend>Centre Ville sélectionné</legend>
+		<div id="CCselection">
+		</div>
+	</fieldset>
+	<fieldset>
+		<legend>Quartier sélectionné</legend>
+		<div id="selection">
+		</div>
+	</fieldset>
+	
+ <form action="#" method="post" class="demoForm" id="transForm">
+	
+    <div class="cc-selector">
+		<fieldset id="districts">
+		
+		</fieldset>
+	</div>
+</form>
+			
+	<fieldset class="range">
+			<form action="/action_page.php";>
+				<div id="range">
+					<legend>Rayon</legend>
+					0
+					<input type="range" id="rayon" name="rayon" value="1" min="0" max="15" label="range"></input>
+					15
+				<br>
+				<div class="displayDisplay" id="rayonDisplay"></div>
+				</div>
+			</form>
+			<form action="/action_page.php";>
+				<div id="range">
+					<legend>Zoom</legend>
+					0
+					<input type="range" id="zoom" name="zoom" value="35" min="0" max="100"></input>
+					100
+				<br>
+				<div class="display" id="zoomDisplay"></div>
+				</div>
+			</form>
+		</fieldset>
+ 
+</div>
+
+</figure>
+    <section id="canvas">
+		<canvas id="hexmap"></canvas>
+		<div class="display" id="display1"></div>
+	<p id="demo"></p>
+	
+    </section>
+
+
+		<div class="display" id="display3" font-size="6px"></div>
+<fieldset id ="bot">
+			<button onclick="copy()">Copy to clipboard</button>
+			<button onclick="link()">Copy link to clipboard</button>
+			<button onclick="paste()">paste and run text from clipboard</button>
+
+			<button onclick="empty()">empty</button>
+			<!-- <button onclick="config1()">config1</button> -->
+			<!-- <button onclick="config2()">config2</button> -->
+			<!-- <button onclick="config3()">config3</button> -->
+			<textarea id="map"></textarea>
+			<!-- <textarea id="Assignment"></textarea> -->
+		</fieldset>
+
+<fieldset id="bot"><legend>Totaux par tour</legend>
+			<fieldset id="block"><legend>Production par tour</legend>
+				<fieldset class="iconfield">
+
+					<legend>
+					<img src="img/production.webp" alt="production: " class="icon"/>
+					</legend>
+					<div id="production">
+					</div>
+				</fieldset>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/Gold.webp" alt="Gold: " id= "Gold" class="icon"/>
+					</legend>
+					<div id="gold">
+					</div>
+				</fieldset>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/science.webp" alt="science: " class="icon"/>
+					</legend>
+					<div id="science">
+					</div>
+				</fieldset>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/culture.webp" alt="culture: " class="icon"/>
+					</legend>
+					<div id="culture">
+					</div>
+				</fieldset>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/faith.webp" alt="faith: " class="icon"/>
+					</legend>
+					<div id="faith">
+					</div>
+				</fieldset>
+			</fieldset>
+			<fieldset id="block"><legend>Personnages illustres par tour</legend>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatMerchant.webp" alt="GreatMerchant: "  class="icon"/>
+					</legend>
+					<div id="GreatMerchant">
+					</div>
+				</fieldset><fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatScientist.webp" alt="GreatScientist: "  class="icon"/>
+					</legend>
+					<div id="GreatScientist">
+					</div>
+				</fieldset><fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatEngineer.webp" alt="GreatEngineer: "  class="icon"/>
+					</legend>
+					<div id="GreatEngineer">
+					</div>
+				</fieldset><fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatProphet.webp" alt="GreatProphet: " class="icon"/>
+					</legend>
+					<div id="GreatProphet">
+					</div>
+				</fieldset><fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatAdmiral.webp" alt="GreatAdmiral: " class="icon"/>
+					</legend>
+					<div id="GreatAdmiral">
+					</div>
+				</fieldset><fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatGeneral.webp" alt="GreatGeneral: " class="icon"/>
+					</legend>
+					<div id="GreatGeneral">
+					</div>
+				</fieldset>
+				
+			</fieldset>
+			<fieldset id="block"><legend>Artistes par tour</legend>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatWriter.webp" alt="GreatWriter: "  class="icon"/>
+					</legend>
+					<div id="GreatWriter">
+					</div>
+				</fieldset>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatArtist.webp" alt="GreatArtist: "  class="icon"/>
+					</legend>
+					<div id="GreatArtist">
+					</div>
+				</fieldset>
+				<fieldset class="iconfield">
+					<legend>
+					<img src="img/GreatMusician.webp" alt="GreatMusician: " class="icon"/>
+					</legend>
+					<div id="GreatMusician">
+					</div>
+				</fieldset>
+				</fieldset>
+			</fieldset>
+			
+<!-- <script language="javascript" src="lz-string.js"></script> -->
+<pre id="log">
+<div id='{"q":-3,"r":-3,"s":6}' class="test" style="background-image:url(img/Theater_Square.webp )">
+</div>
+</pre>
+<div class="display" id="display2"></div>
+<!-- <div class="cursor"></div> -->
+<!-- <img id="cursor" src="img/Campus.webp" alt="Cursor" class="cursor" /> -->
+<img id="cursor" alt="Cursor" class="cursor" />
+<div>Most images are from
+ <a href="https://civilization.fandom.com/wiki/Civilization_VI"> https://civilization.fandom.com/wiki/Civilization_VI</a> </div>
+
+	Content is available under <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>
+ unless otherwise noted.
+</body>
+
+<script src="hexagons.js" /> import java.io.File; </script>
+</html>
